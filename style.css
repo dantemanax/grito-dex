@@ -1,6 +1,5 @@
 :root {
     --pokedex-red: #c00d0d;
-    --pokedex-dark: #8b0000;
     --screen-bg: #98b088; 
     --screen-text: #2c3e50;
 }
@@ -22,7 +21,6 @@ body {
     border-radius: 10px 10px 10px 60px;
     border: 7px solid #444;
     box-shadow: 12px 12px 0px rgba(0,0,0,0.4);
-    position: relative;
 }
 
 .top-lights { display: flex; gap: 18px; margin-bottom: 25px; }
@@ -31,116 +29,69 @@ body {
     background: radial-gradient(circle, #5dade2, #2e86c1);
     border: 5px solid white;
     border-radius: 50%;
-    box-shadow: 0 0 15px rgba(255,255,255,0.8);
 }
+
+/* Animación de carga para la luz azul */
+.loading-light { animation: blink 0.5s infinite; }
+@keyframes blink { 0% { opacity: 1; } 50% { opacity: 0.4; } 100% { opacity: 1; } }
+
 .small-lights { display: flex; gap: 7px; padding-top: 8px; }
 .light { width: 18px; height: 18px; border-radius: 50%; border: 2px solid #333; }
 .red { background: #ff0000; }
 .yellow { background: #f1c40f; }
 .green { background: #2ecc71; }
 
-.title {
-    font-size: 18px; 
-    color: white;
-    text-align: center;
-    margin: 15px 0;
-}
+.title { font-size: 18px; color: white; text-align: center; margin: 15px 0; }
 
 .filter-section select {
-    width: 100%;
-    background: #444;
-    color: white;
-    font-family: 'Press Start 2P', cursive;
-    font-size: 13px;
-    padding: 8px;
-    margin-bottom: 15px;
-    border: 3px solid white;
+    width: 100%; background: #444; color: white;
+    font-family: 'Press Start 2P', cursive; font-size: 13px;
+    padding: 8px; margin-bottom: 15px; border: 3px solid white;
 }
 
 .screen-container {
-    background-color: #dedede;
-    padding: 15px 15px 35px 15px;
-    border-radius: 12px;
-    border: 5px solid #555;
-    margin-bottom: 20px;
+    background-color: #dedede; padding: 15px 15px 35px 15px;
+    border-radius: 12px; border: 5px solid #555; margin-bottom: 20px;
 }
 
 #main-screen {
-    background-color: var(--screen-bg);
-    border: 5px inset #7c8d71;
-    min-height: 340px; 
-    padding: 12px;
-    color: var(--screen-text);
+    background-color: var(--screen-bg); border: 5px inset #7c8d71;
+    min-height: 340px; padding: 12px; color: var(--screen-text);
 }
 
 #play-btn {
-    width: 100%;
-    background: #333;
-    color: #fff;
-    border: none;
-    padding: 14px;
-    font-family: 'Press Start 2P', cursive;
-    font-size: 11px;
-    cursor: pointer;
-    margin-bottom: 15px;
+    width: 100%; background: #333; color: #fff; border: none;
+    padding: 14px; font-family: 'Press Start 2P', cursive;
+    font-size: 11px; cursor: pointer; margin-bottom: 15px;
 }
 
 .options-grid { display: flex; flex-direction: column; gap: 8px; }
 
 .option-btn {
-    display: flex;
-    align-items: center;
-    background: none;
-    border: 2px solid transparent;
-    cursor: pointer;
-    text-align: left;
-    font-family: 'Press Start 2P', cursive;
-    font-size: 12px;
-    padding: 4px;
+    display: flex; align-items: center; background: rgba(255,255,255,0.2);
+    border: 2px solid transparent; cursor: pointer;
+    font-family: 'Press Start 2P', cursive; font-size: 12px;
+    padding: 4px; border-radius: 5px; width: 100%;
 }
 
-.option-btn:hover:not(:disabled) { border-color: var(--screen-text); }
+.option-btn:hover:not(:disabled) { background: rgba(255,255,255,0.4); border-color: var(--screen-text); }
 
-.pkmn-icon {
-    width: 52px; 
-    height: 52px;
-    margin-right: 15px;
-    image-rendering: pixelated;
-}
+.pkmn-icon { width: 52px; height: 52px; margin-right: 15px; image-rendering: pixelated; }
 
-.option-btn.correct { color: #004d00; font-weight: bold; }
-.option-btn.incorrect { color: #8b0000; opacity: 0.7; }
+.option-btn.correct { background-color: #2ecc71 !important; color: white; }
+.option-btn.incorrect { background-color: #e74c3c !important; color: white; }
 
-#feedback {
-    color: white;
-    font-size: 11px;
-    text-align: center;
-    margin-bottom: 20px;
-    min-height: 60px;
-}
-
+#feedback { color: white; font-size: 11px; text-align: center; margin-bottom: 20px; }
 #next-btn {
-    background: #2ecc71;
-    border: 3px solid #fff;
-    padding: 12px;
-    font-family: 'Press Start 2P', cursive;
-    font-size: 13px;
-    cursor: pointer;
-    margin-top: 10px;
+    background: #2ecc71; border: 3px solid #fff; padding: 12px;
+    font-family: 'Press Start 2P', cursive; font-size: 13px; cursor: pointer;
 }
 
-.pokedex-decoration {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 15px;
-}
+.pokedex-decoration { display: flex; justify-content: space-between; padding: 0 15px; }
 .d-pad {
-    width: 50px; height: 50px;
-    background: #333;
+    width: 50px; height: 50px; background: #333;
     clip-path: polygon(33% 0%, 66% 0%, 66% 33%, 100% 33%, 100% 66%, 66% 66%, 66% 100%, 33% 100%, 33% 66%, 0% 66%, 0% 33%, 33% 33%);
 }
 .long-buttons { display: flex; gap: 15px; }
-.long-btn { width: 40px; height: 7px; border-radius: 5px; background: #333; }
-
+.long-btn { width: 40px; height: 7px; background: #333; border-radius: 5px; }
 .hidden { display: none; }
