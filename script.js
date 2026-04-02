@@ -1,8 +1,11 @@
+// Configuración de Generaciones hasta la 5ta (Unova)
 const GEN_RANGES = {
     "1": { min: 1, max: 151 },
     "2": { min: 152, max: 251 },
     "3": { min: 252, max: 386 },
-    "all": { min: 1, max: 386 }
+    "4": { min: 387, max: 493 },
+    "5": { min: 494, max: 649 },
+    "all": { min: 1, max: 649 }
 };
 
 const optionsContainer = document.getElementById('options-container');
@@ -81,11 +84,11 @@ function handleGuess(selectedId, btnElement) {
 
     if (selectedId === currentTarget.id) {
         btnElement.classList.add('correct');
-        message.innerText = `¡ACIERTO TOTAL!`;
+        message.innerText = `¡LOGRADO!`;
         sndSuccess.play();
     } else {
         btnElement.classList.add('incorrect');
-        message.innerText = `FALLASTE: ERA ${currentTarget.name}`;
+        message.innerText = `ERA ${currentTarget.name}`;
         sndError.play();
         
         allButtons.forEach(btn => {
