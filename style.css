@@ -17,7 +17,7 @@ body {
 
 .pokedex {
     background-color: var(--pokedex-red);
-    width: 440px; /* Escalado para alojar elementos más grandes */
+    width: 440px; 
     padding: 25px;
     border-radius: 10px 10px 10px 60px;
     border: 7px solid #444;
@@ -25,7 +25,6 @@ body {
     position: relative;
 }
 
-/* Luces */
 .top-lights { display: flex; gap: 18px; margin-bottom: 25px; }
 .big-blue-light {
     width: 60px; height: 60px;
@@ -41,7 +40,7 @@ body {
 .green { background: #2ecc71; }
 
 .title {
-    font-size: 18px; /* +30% aprox */
+    font-size: 18px; 
     color: white;
     text-align: center;
     margin: 15px 0;
@@ -52,13 +51,12 @@ body {
     background: #444;
     color: white;
     font-family: 'Press Start 2P', cursive;
-    font-size: 13px; /* +30% */
+    font-size: 13px;
     padding: 8px;
     margin-bottom: 15px;
     border: 3px solid white;
 }
 
-/* Pantalla */
 .screen-container {
     background-color: #dedede;
     padding: 15px 15px 35px 15px;
@@ -70,7 +68,7 @@ body {
 #main-screen {
     background-color: var(--screen-bg);
     border: 5px inset #7c8d71;
-    min-height: 320px; /* Más alto para iconos grandes */
+    min-height: 340px; 
     padding: 12px;
     color: var(--screen-text);
 }
@@ -82,7 +80,7 @@ body {
     border: none;
     padding: 14px;
     font-family: 'Press Start 2P', cursive;
-    font-size: 11px; /* +30% */
+    font-size: 11px;
     cursor: pointer;
     margin-bottom: 15px;
 }
@@ -97,15 +95,14 @@ body {
     cursor: pointer;
     text-align: left;
     font-family: 'Press Start 2P', cursive;
-    font-size: 12px; /* +30% */
+    font-size: 12px;
     padding: 4px;
-    transition: 0.1s;
 }
 
-.option-btn:hover:not(:disabled) { border-color: var(--screen-text); background: rgba(0,0,0,0.05); }
+.option-btn:hover:not(:disabled) { border-color: var(--screen-text); }
 
 .pkmn-icon {
-    width: 52px; /* +30% de 40px */
+    width: 52px; 
     height: 52px;
     margin-right: 15px;
     image-rendering: pixelated;
@@ -116,7 +113,7 @@ body {
 
 #feedback {
     color: white;
-    font-size: 11px; /* +30% */
+    font-size: 11px;
     text-align: center;
     margin-bottom: 20px;
     min-height: 60px;
@@ -127,12 +124,11 @@ body {
     border: 3px solid #fff;
     padding: 12px;
     font-family: 'Press Start 2P', cursive;
-    font-size: 13px; /* +30% */
+    font-size: 13px;
     cursor: pointer;
     margin-top: 10px;
 }
 
-/* Decoración Inferior */
 .pokedex-decoration {
     display: flex;
     justify-content: space-between;
